@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overnight Sash Height Data</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="image-container">
+        {% for fumehoodNumber in fumehoodNumbers %}
+        <div id="{{ fumehoodNumber }}Container">
+            <p>{{ fumehoodNumber }}</p>
+            <img id="{{ fumehoodNumber }}Image" alt="Image" width="1200" height="300">
+        </div>
+        <script>
+            setTimeout(function() {
+                var container = document.getElementById('{{ fumehoodNumber }}Container');
+                var image = document.getElementById('{{ fumehoodNumber }}Image');
+                container.innerHTML = '<p>{{ fumehoodNumber }}</p><img src="/get_image/{{ fumehoodNumber }}" alt="Image" width="1200" height="300">';
+            }, 1000 * {{ loop.index }});
+        </script>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

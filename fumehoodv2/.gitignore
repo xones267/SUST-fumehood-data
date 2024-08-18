@@ -1,0 +1,11 @@
+# Ignore specific files and directories
+./plotbase
+./__pycache__
+apicheck.ipynb
+test.csv
+./database
+./Master Fume Hood List - Department, Building, Room.xlsx
+./output_plots.pdf
+output_plots.pdf
+__pycache__
+*.ipynb

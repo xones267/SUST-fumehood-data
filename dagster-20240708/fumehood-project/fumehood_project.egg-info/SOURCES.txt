@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fumehood_project/__init__.py
+fumehood_project/assets.py
+fumehood_project.egg-info/PKG-INFO
+fumehood_project.egg-info/SOURCES.txt
+fumehood_project.egg-info/dependency_links.txt
+fumehood_project.egg-info/requires.txt
+fumehood_project.egg-info/top_level.txt
